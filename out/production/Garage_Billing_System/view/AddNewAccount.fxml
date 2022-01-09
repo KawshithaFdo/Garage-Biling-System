@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="CreateUserAccount_onAction" prefHeight="524.0" prefWidth="782.0" styleClass="NewAccount" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddNewAccountController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" prefHeight="69.0" prefWidth="433.0" text="Create New  Account" textAlignment="CENTER" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Algerian" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btncreate" buttonType="RAISED" layoutX="140.0" layoutY="432.0" onAction="#CreateNewUser_OnAction" prefHeight="38.0" prefWidth="503.0" style="-fx-background-color: #1e3799;" text="Create Account" textFill="WHITE" AnchorPane.rightAnchor="139.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Calibri Bold Italic" size="23.0" />
+         </font>
+      </JFXButton>
+      <Text fill="RED" layoutX="209.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Passsword maximum length is 10" wrappingWidth="240.6708984375" />
+      <JFXTextField fx:id="UserName" focusColor="BLACK" labelFloat="true" layoutX="136.0" layoutY="135.0" onKeyReleased="#keyReleased" prefHeight="31.0" prefWidth="230.0" promptText="Name" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="137.0">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="UserAddress" focusColor="BLACK" labelFloat="true" layoutX="136.0" layoutY="190.0" onKeyReleased="#keyReleased" prefHeight="31.0" prefWidth="230.0" promptText="Address" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="137.0">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="UserContact" focusColor="BLACK" labelFloat="true" layoutX="136.0" layoutY="247.0" onKeyReleased="#keyReleased" prefHeight="31.0" prefWidth="230.0" promptText="Contact" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="137.0">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="UserNIC" focusColor="BLACK" labelFloat="true" layoutX="137.0" layoutY="297.0" onKeyReleased="#keyReleased" prefHeight="31.0" prefWidth="230.0" promptText="NIC" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="136.0">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="UserPassword" focusColor="BLACK" labelFloat="true" layoutX="137.0" layoutY="345.0" onKeyReleased="#keyReleased" prefHeight="31.0" prefWidth="230.0" promptText="Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="137.0" AnchorPane.rightAnchor="136.0">
+         <font>
+            <Font name="Baskerville Old Face" size="16.0" />
+         </font></JFXPasswordField>
+      <Label fx:id="UserId" layoutX="331.0" layoutY="87.0" prefHeight="21.0" prefWidth="97.0" text="ID" AnchorPane.leftAnchor="331.0" AnchorPane.rightAnchor="354.0">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font></Label>
+      <Label layoutX="248.0" layoutY="87.0" prefHeight="21.0" prefWidth="81.0" text="Your Id    :" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="453.0">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

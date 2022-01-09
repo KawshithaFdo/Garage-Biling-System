@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManageSparePartsContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1310.0" style="-fx-background-color: #95afc0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminForms.ManageSparePartsController">
+   <children>
+      <Label layoutX="14.0" layoutY="8.0" prefHeight="30.0" prefWidth="105.0" text="Part  Id  :" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="SparePartId" layoutX="128.0" layoutY="8.0" prefHeight="30.0" prefWidth="129.0" text="Id" textFill="WHITE" AnchorPane.topAnchor="8.0">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="S_Name" editable="false" focusColor="BLACK" labelFloat="true" layoutX="307.0" layoutY="88.0" prefHeight="31.0" prefWidth="195.0" promptText="Supplier_Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="808.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Part_Name" focusColor="BLACK" labelFloat="true" layoutX="67.0" layoutY="149.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Part Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="1048.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Part_Country" focusColor="BLACK" labelFloat="true" layoutX="539.0" layoutY="149.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Part Country" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="539.0" AnchorPane.rightAnchor="576.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Part_Brand" focusColor="BLACK" labelFloat="true" layoutX="307.0" layoutY="149.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Part Brand" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="808.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Part_Qty" focusColor="BLACK" labelFloat="true" layoutX="785.0" layoutY="149.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Qty" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="785.0" AnchorPane.rightAnchor="330.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Part_UnitPrice" focusColor="BLACK" labelFloat="true" layoutX="1023.0" layoutY="149.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Unit Price" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="1023.0" AnchorPane.rightAnchor="92.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Part_Discount" focusColor="BLACK" labelFloat="true" layoutX="67.0" layoutY="219.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Discount(%)" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="1048.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAddSpareParts" buttonType="RAISED" layoutX="1076.0" layoutY="213.0" onAction="#AddSpareParts" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #1e3799;" text="Add Spare Parts" textFill="WHITE" AnchorPane.bottomAnchor="545.0" AnchorPane.rightAnchor="51.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblSpareParts" layoutX="60.0" layoutY="280.0" prefHeight="239.0" prefWidth="1191.0" style="-fx-border-color: #222f3e;">
+        <columns>
+          <TableColumn fx:id="colpartId" prefWidth="108.00003051757812" text="Spare Part Id" />
+          <TableColumn fx:id="colname" prefWidth="169.0" text="Name" />
+            <TableColumn fx:id="colBrand" prefWidth="184.0" text="Brand" />
+            <TableColumn fx:id="colCountry" prefWidth="197.0" text="Country" />
+            <TableColumn fx:id="colQty" prefWidth="104.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="161.0" text="Unit Price" />
+            <TableColumn fx:id="colDiscount" prefWidth="122.0" text="Discount(%)" />
+            <TableColumn fx:id="colsupplierId" prefWidth="145.0" text="Supplier Id" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="EditPart_Name" focusColor="BLACK" labelFloat="true" layoutX="293.0" layoutY="600.0" onKeyReleased="#OnEditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Part Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="822.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="EditPart_Country" focusColor="BLACK" labelFloat="true" layoutX="784.0" layoutY="600.0" onKeyReleased="#OnEditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Part Country" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="784.0" AnchorPane.rightAnchor="331.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="EditPart_Brand" focusColor="BLACK" labelFloat="true" layoutX="537.0" layoutY="600.0" onKeyReleased="#OnEditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Part Brand" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="578.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="EditPart_Qty" focusColor="BLACK" labelFloat="true" layoutX="1022.0" layoutY="600.0" onKeyReleased="#OnEditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Qty" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="1022.0" AnchorPane.rightAnchor="93.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="EditPart_UnitPrice" focusColor="BLACK" labelFloat="true" layoutX="48.0" layoutY="657.0" onKeyReleased="#OnEditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Unit Price" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="1067.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="EditPart_Discount" focusColor="BLACK" labelFloat="true" layoutX="293.0" layoutY="657.0" onKeyReleased="#OnEditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Discount(%)" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="822.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnDeleteSpareParts" buttonType="RAISED" layoutX="1039.0" layoutY="718.0" onAction="#DeleteSpareParts" prefHeight="42.0" prefWidth="220.0" style="-fx-background-color: #ff3f34;" text="Delete Spare Parts" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="51.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateSpareParts" buttonType="RAISED" layoutX="760.0" layoutY="718.0" onAction="#UpdateSpareParts" prefHeight="42.0" prefWidth="220.0" style="-fx-background-color: #1e3799;" text="Update Spare Parts" textFill="WHITE" AnchorPane.bottomAnchor="40.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="104.0" layoutY="47.0" prefHeight="30.0" prefWidth="183.0" text="Add Spare Parts" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="1023.0">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="541.0" prefHeight="30.0" prefWidth="183.0" text="Edit Spare Parts" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="1023.0">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="EditPart_Id" focusColor="BLACK" labelFloat="true" layoutX="48.0" layoutY="600.0" onAction="#OpenEditPartDetails" onKeyReleased="#OnEditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Part Id" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="1067.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </JFXTextField>
+      <ComboBox fx:id="cmbSupplierId" layoutX="67.0" layoutY="88.0" prefHeight="31.0" prefWidth="195.0" promptText="Supplier Id" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="1048.0" />
+   </children>
+</AnchorPane>

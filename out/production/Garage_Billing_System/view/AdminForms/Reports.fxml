@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AdminReportsContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1310.0" style="-fx-background-color: #95afc0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminForms.Reportscontroller">
+    <children>
+        <Label alignment="TOP_CENTER" contentDisplay="TOP" layoutX="477.0" layoutY="14.0" text="Admin Reports" AnchorPane.topAnchor="14.0">
+            <font>
+                <Font name="System Bold Italic" size="39.0" />
+            </font>
+        </Label>
+        <JFXButton buttonType="RAISED" layoutX="540.0" layoutY="158.0" onAction="#Billreport" prefHeight="56.0" prefWidth="201.0" ripplerFill="WHITE" style="-fx-background-color: #74b9ff;" text="Bill Reports" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="158.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="540.0" layoutY="316.0" onAction="#DailyIncome" prefHeight="56.0" prefWidth="201.0" style="-fx-background-color: #74b9ff;" text="Daily Income" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="569.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="540.0" layoutY="437.0" onAction="#Supplierreport" prefHeight="56.0" prefWidth="201.0" style="-fx-background-color: #74b9ff;" text="Supplier Report" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="569.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="540.0" layoutY="548.0" onAction="#MechanicDetail" prefHeight="56.0" prefWidth="201.0" style="-fx-background-color: #74b9ff;" text="Mechanic Detail report" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="569.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="540.0" layoutY="653.0" onAction="#MechanicSalary" prefHeight="56.0" prefWidth="201.0" style="-fx-background-color: #74b9ff;" text="Monthly Mechanic salary" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="569.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+      <DatePicker fx:id="date" layoutX="530.0" layoutY="272.0" promptText="Select date" />
+    </children>
+</AnchorPane>

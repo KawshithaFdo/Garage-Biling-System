@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox focusTraversable="true" prefHeight="881.0" prefWidth="173.0" style="-fx-background-color: #2c2c54;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnmanageCustomer" buttonType="RAISED" cache="true" depthTest="DISABLE" layoutX="10.0" layoutY="148.0" onAction="#ManageCustomer" onMouseClicked="#mouseClick" prefHeight="69.0" prefWidth="206.0" ripplerFill="BLACK" text="Manage Customer" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnManageVehicle" buttonType="RAISED" layoutX="15.0" layoutY="15.0" onAction="#ManageVehicle" onMouseClicked="#mouseClick" prefHeight="69.0" prefWidth="206.0" ripplerFill="BLACK" text="Manage   Vehicle" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnManageBooking" buttonType="RAISED" layoutX="10.0" layoutY="286.0" onAction="#ManageBooking" onMouseClicked="#mouseClick" prefHeight="69.0" prefWidth="206.0" ripplerFill="BLACK" text="Manage Booking" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMakePayment" buttonType="RAISED" layoutX="10.0" layoutY="455.0" lineSpacing="5.0" onAction="#MakePayment" onMouseClicked="#mouseClick" prefHeight="69.0" prefWidth="206.0" ripplerFill="BLACK" text=" Payments" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnmanagePayment" buttonType="RAISED" layoutX="15.0" layoutY="252.0" lineSpacing="5.0" onAction="#UpdatePayments" onMouseClicked="#mouseClick" prefHeight="69.0" prefWidth="206.0" ripplerFill="BLACK" text="Update Payments" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnReports" buttonType="RAISED" layoutX="15.0" layoutY="458.0" lineSpacing="5.0" onAction="#OpenReports" onMouseClicked="#mouseClick" prefHeight="69.0" prefWidth="206.0" ripplerFill="BLACK" text="Reports" textFill="WHITE" wrapText="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#GoHome" prefHeight="61.0" prefWidth="174.0" text="LogOut" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bauhaus 93" size="19.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="230.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </left>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #3c40c6;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="176.0" styleClass="icon" stylesheets="@../css/main.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Pane>
+                  <Label prefHeight="31.0" prefWidth="66.0" text="User " textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="50.0" left="200.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="31.0" prefWidth="116.0" text="LogIn as :" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="50.0" left="200.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="UserName" layoutX="249.0" layoutY="10.0" prefHeight="26.0" prefWidth="168.0" text="UserName" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="50.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="Date" layoutX="249.0" layoutY="10.0" prefHeight="31.0" prefWidth="198.0" text="Date" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="21.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="50.0" left="150.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="Time" layoutX="520.0" layoutY="10.0" prefHeight="31.0" prefWidth="215.0" text="Time" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="21.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="50.0" left="90.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <StackPane fx:id="stackRoot" prefHeight="800.0" prefWidth="1310.0" styleClass="Background" stylesheets="@../css/main.css" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

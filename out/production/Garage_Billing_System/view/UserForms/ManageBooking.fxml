@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManageBookingContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1310.0" style="-fx-background-color: #95afc0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserForms.ManageBookingController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="138.0" text="Booking ID  :" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="1158.0">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font></Label>
+      <Label fx:id="BookingId" layoutX="161.0" layoutY="14.0" prefHeight="30.0" prefWidth="116.0" text="Id" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="161.0" AnchorPane.rightAnchor="1033.0">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font></Label>
+      <JFXTextField fx:id="reg_No" focusColor="BLACK" labelFloat="true" layoutX="105.0" layoutY="113.0" onAction="#OpenRegNo" onKeyReleased="#KeyReleased" prefHeight="31.0" prefWidth="178.0" promptText="Registration No" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="1027.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Cust_Id" editable="false" focusColor="BLACK" labelFloat="true" layoutX="362.0" layoutY="113.0" onKeyReleased="#KeyReleased" prefHeight="31.0" prefWidth="178.0" promptText="Cust_Id" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="362.0" AnchorPane.rightAnchor="770.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Custname" editable="false" focusColor="BLACK" labelFloat="true" layoutX="606.0" layoutY="113.0" onKeyReleased="#KeyReleased" prefHeight="31.0" prefWidth="178.0" promptText="Cust_Name" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="606.0" AnchorPane.rightAnchor="526.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAddBooking" buttonType="RAISED" layoutX="1163.0" layoutY="171.0" onAction="#AddBooking_OnAction" prefHeight="31.0" prefWidth="157.0" style="-fx-background-color: #1e3799;" text="Add Booking" textFill="WHITE" AnchorPane.bottomAnchor="597.0" AnchorPane.rightAnchor="31.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblBooking" layoutX="59.0" layoutY="236.0" prefHeight="411.0" prefWidth="1193.0" style="-fx-border-color: #222f3e;" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="58.0">
+        <columns>
+          <TableColumn fx:id="colBookingId" editable="false" prefWidth="174.0" text="Booking_Id" />
+          <TableColumn fx:id="colCustomerId" editable="false" prefWidth="219.0" text="Customer Id" />
+            <TableColumn fx:id="colReg_No" editable="false" prefWidth="270.0" text="Reg_No" />
+            <TableColumn fx:id="colDate" editable="false" prefWidth="281.0" text="Date" />
+            <TableColumn fx:id="colTime" editable="false" prefWidth="245.0" text="Time" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton fx:id="btnDeleteBooking" buttonType="RAISED" layoutX="1122.0" layoutY="756.0" onAction="#DeleteBooking_OnAction" prefHeight="31.0" prefWidth="157.0" style="-fx-background-color: #ff3f34;" text="Delete Booking" textFill="WHITE" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="31.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="EditDate" layoutX="373.0" layoutY="725.0" promptText="Edit date" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="373.0" />
+      <JFXTimePicker fx:id="EditTime" layoutX="634.0" layoutY="725.0" promptText="Edit Time" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="43.0" />
+      <JFXButton fx:id="btnUpdateBooking" buttonType="RAISED" layoutX="905.0" layoutY="756.0" onAction="#UpdateBooking_OnAction" prefHeight="31.0" prefWidth="157.0" style="-fx-background-color: #1e3799;" text="Update Booking" textFill="WHITE" AnchorPane.bottomAnchor="12.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="Date" layoutX="821.0" layoutY="113.0" promptText="Date" AnchorPane.leftAnchor="821.0" AnchorPane.rightAnchor="271.0" />
+      <JFXTimePicker fx:id="Time" layoutX="1082.0" layoutY="113.0" promptText="Time" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="1082.0" AnchorPane.rightAnchor="23.0" />
+      <Label layoutX="139.0" layoutY="66.0" prefHeight="34.0" prefWidth="193.0" text="Add Booking" AnchorPane.leftAnchor="139.0">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="674.0" prefHeight="34.0" prefWidth="193.0" text="Edit Booking" AnchorPane.leftAnchor="139.0">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="EditBookingId" focusColor="BLACK" labelFloat="true" layoutX="130.0" layoutY="725.0" onAction="#openUpdatedata" onKeyReleased="#EditKeyreleased" prefHeight="31.0" prefWidth="178.0" promptText="Booking Id" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="1027.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

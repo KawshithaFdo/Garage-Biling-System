@@ -1,0 +1,24 @@
+.body{
+    -fx-background-color :#7efff5;
+    -fx-background-size: 100% 100%;
+}
+.login{
+    -fx-background-image:url("/Asserts/login.jpg");
+    -fx-background-size: 100% 100%;
+}
+.NewAccount{
+    -fx-background-image:url("/Asserts/Newacc.jpg");
+    -fx-background-size: 100% 100%;
+}
+.Background{
+    -fx-background-image:url("/Asserts/UserForm.jpg");
+    -fx-background-size: 100% 100%;
+}
+.icon{
+    -fx-background-image:url("/Asserts/icon.jpg");
+    -fx-background-size: 100% 100%;
+}
+.loginicon{
+    -fx-background-image:url("/Asserts/ic.png");
+    -fx-background-size: 100% 100%;
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManageSupplierContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1310.0" style="-fx-background-color: #95afc0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminForms.ManageSupplierController">
+    <children>
+        <Label layoutX="14.0" layoutY="9.0" prefHeight="36.0" prefWidth="141.0" text="Supplier Id  :" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="9.0">
+            <font>
+                <Font name="Cambria Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblSupplierId" layoutX="155.0" layoutY="12.0" prefHeight="28.0" prefWidth="106.0" text="id" textFill="WHITE" AnchorPane.topAnchor="12.0">
+            <font>
+                <Font name="Cambria Bold" size="20.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="101.0" layoutY="94.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Supplier Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="1014.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+        <JFXTextField fx:id="txtContact" focusColor="BLACK" labelFloat="true" layoutX="351.0" layoutY="94.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Contact" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="351.0" AnchorPane.rightAnchor="764.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+        <JFXTextField fx:id="txtNic" focusColor="BLACK" labelFloat="true" layoutX="605.0" layoutY="94.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="NIC" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="605.0" AnchorPane.rightAnchor="510.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+        <JFXTextField fx:id="txtCompany" focusColor="BLACK" labelFloat="true" layoutX="856.0" layoutY="94.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Company" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="856.0" AnchorPane.rightAnchor="259.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+        <JFXButton fx:id="btnAddSupplier" buttonType="RAISED" layoutX="1080.0" layoutY="150.0" onAction="#addSupplierOnaction" prefHeight="38.0" prefWidth="141.0" style="-fx-background-color: #1e3799;" text="Add Supplier" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="612.0" AnchorPane.rightAnchor="89.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </JFXButton>
+      <TableView fx:id="tblSupplier" layoutX="66.0" layoutY="244.0" prefHeight="296.0" prefWidth="1179.0" style="-fx-border-color: #222f3e;" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="65.0">
+        <columns>
+          <TableColumn fx:id="colSupId" prefWidth="123.0" text="Supplier Id" />
+          <TableColumn fx:id="colName" prefWidth="225.0" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="220.0" text="Contact" />
+            <TableColumn fx:id="colNic" prefWidth="191.0" text="NIC" />
+            <TableColumn fx:id="colCompany" prefWidth="268.0" text="Company" />
+            <TableColumn fx:id="colAdminId" prefWidth="151.0" text="Admin Id" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtEditName" focusColor="BLACK" labelFloat="true" layoutX="130.0" layoutY="686.0" onKeyReleased="#EditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Supplier Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="985.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtEditContact" focusColor="BLACK" labelFloat="true" layoutX="382.0" layoutY="686.0" onKeyReleased="#EditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Contact" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="733.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtEditNic" focusColor="BLACK" labelFloat="true" layoutX="638.0" layoutY="686.0" onKeyReleased="#EditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="NIC" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="638.0" AnchorPane.rightAnchor="477.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtEditCompany" focusColor="BLACK" labelFloat="true" layoutX="890.0" layoutY="686.0" onKeyReleased="#EditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Company" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="890.0" AnchorPane.rightAnchor="225.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnDeleteSupplier1" buttonType="RAISED" layoutX="1091.0" layoutY="748.0" onAction="#DeleteSupplierOnaction" prefHeight="38.0" prefWidth="168.0" style="-fx-background-color: #ff3f34;" text="Delete Supplier" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="51.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateSupplier1" buttonType="RAISED" layoutX="853.0" layoutY="748.0" onAction="#UpdateSupplierOnaction" prefHeight="38.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Update Supplier" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="14.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="130.0" layoutY="45.0" prefHeight="36.0" prefWidth="141.0" text="Add Supplier" AnchorPane.leftAnchor="130.0">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="571.0" prefHeight="36.0" prefWidth="141.0" text="Edit Supplier" AnchorPane.leftAnchor="130.0">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEditSup_Id" focusColor="BLACK" labelFloat="true" layoutX="130.0" layoutY="628.0" onAction="#openSupplierDetails" onKeyReleased="#EditKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Supplier ID" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="985.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </JFXTextField>
+    </children>
+</AnchorPane>

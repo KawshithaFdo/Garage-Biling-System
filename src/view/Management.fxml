@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagementController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="73.0" prefWidth="600.0" style="-fx-background-color: #7f8fa6;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton buttonType="RAISED" onMouseClicked="#goHome" prefHeight="46.0" prefWidth="104.0" style="-fx-background-color: #2ed573;" text="Back" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="5.0" right="15.0" top="15.0" />
+                     </HBox.margin></JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="76.0" prefWidth="618.0" text="Management " textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold Italic" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox focusTraversable="true" prefHeight="423.0" prefWidth="118.0" spacing="5.0" style="-fx-background-color: #273c75;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnUser" buttonType="RAISED" lineSpacing="5.0" onAction="#openUser" onMouseClicked="#mouseClicked" prefHeight="51.0" prefWidth="118.0" text="User" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="70.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btncustomer" buttonType="RAISED" layoutX="10.0" layoutY="57.0" lineSpacing="5.0" onAction="#openCustomer" onMouseClicked="#mouseClicked" prefHeight="54.0" prefWidth="118.0" text="Customer" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnVehicle" buttonType="RAISED" layoutX="10.0" layoutY="104.0" onAction="#openVehicle" onMouseClicked="#mouseClicked" prefHeight="54.0" prefWidth="118.0" text="Vehicle" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnMechanic" buttonType="RAISED" layoutX="10.0" layoutY="151.0" onAction="#openMechanic" onMouseClicked="#mouseClicked" prefHeight="55.0" prefWidth="118.0" text="Mechanic" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSupplier" buttonType="RAISED" layoutX="10.0" layoutY="198.0" onAction="#opensupplier" onMouseClicked="#mouseClicked" prefHeight="54.0" prefWidth="117.0" text="Supplier" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnBill" buttonType="RAISED" layoutX="15.0" layoutY="423.0" onAction="#openBill" onMouseClicked="#mouseClicked" prefHeight="54.0" prefWidth="117.0" text="Bill" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="panelRoot" prefHeight="900.0" prefWidth="1310.0" style="-fx-background-color: #95afc0;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

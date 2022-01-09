@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MakePaymentContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1310.0" style="-fx-background-color: #95afc0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserForms.MakePaymentController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="78.0" layoutX="921.0" layoutY="597.0" stroke="BLACK" strokeType="INSIDE" width="188.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Bill No  :" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBill_Id" layoutX="98.0" layoutY="11.0" prefHeight="27.0" prefWidth="136.0" text="No" textFill="WHITE" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="1076.0">
+         <font>
+            <Font name="Arial Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbPartIds" layoutX="140.0" layoutY="144.0" prefHeight="31.0" prefWidth="188.0" promptText="Spare Part Id" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="982.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <JFXTextField fx:id="QtyAvailable" editable="false" focusColor="BLACK" labelFloat="true" layoutX="932.0" layoutY="144.0" prefHeight="31.0" prefWidth="105.0" promptText="Qty On Hand" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="932.0" AnchorPane.rightAnchor="273.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="MechanicCost" focusColor="BLACK" labelFloat="true" layoutX="166.0" layoutY="582.0" onAction="#calculateFinalBill" onKeyReleased="#MechanicCostKeyReleased" prefHeight="31.0" prefWidth="188.0" promptText="Mechanic Cost" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="956.0" />
+      <TableView fx:id="tblBill" editable="true" layoutX="133.0" layoutY="243.0" prefHeight="286.0" prefWidth="1082.0" style="-fx-border-color: #353b48;" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="95.0">
+        <columns>
+          <TableColumn fx:id="colPartId" prefWidth="130.0" text="Part Id" />
+          <TableColumn fx:id="colPartname" prefWidth="210.0" text="Name" />
+            <TableColumn fx:id="colQtyAvailable" prefWidth="143.0" text="Qty(Available)" />
+            <TableColumn fx:id="colPartQty" prefWidth="167.0" text="Qty(Used)" />
+            <TableColumn fx:id="colPartUnitprice" prefWidth="168.0" text="UnitPrice" />
+            <TableColumn fx:id="colDiscount" prefWidth="133.0" text="Discount" />
+            <TableColumn fx:id="colPrice" prefWidth="130.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="Name" editable="false" focusColor="BLACK" labelFloat="true" layoutX="396.0" layoutY="144.0" prefHeight="31.0" prefWidth="209.0" promptText="Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="396.0" AnchorPane.rightAnchor="705.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Brand" editable="false" focusColor="BLACK" labelFloat="true" layoutX="674.0" layoutY="144.0" prefHeight="31.0" prefWidth="209.0" promptText="Brand" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="674.0" AnchorPane.rightAnchor="427.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAddtoCart" buttonType="RAISED" layoutX="1073.0" layoutY="192.0" onAction="#AddToCartOnAction" style="-fx-background-color: #1e3799;" text="Add To Cart" textFill="WHITE" AnchorPane.bottomAnchor="576.0" AnchorPane.rightAnchor="132.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="246.0" layoutY="657.0" prefHeight="30.0" prefWidth="126.0" text="Parts Cost  :" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="938.0">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="partsCost" layoutX="385.0" layoutY="657.0" prefHeight="30.0" prefWidth="136.0" text="0/=" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="789.0">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="203.0" layoutY="713.0" prefHeight="30.0" prefWidth="169.0" text="Total Discount   :" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="938.0">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalDiscount" layoutX="380.0" layoutY="713.0" prefHeight="28.0" prefWidth="188.0" text="0/=" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="742.0">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="689.0" layoutY="612.0" prefHeight="30.0" prefWidth="222.0" text="Total Amount    :" AnchorPane.leftAnchor="689.0" AnchorPane.rightAnchor="399.0">
+         <font>
+            <Font name="Bell MT Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalAmount" layoutX="949.0" layoutY="612.0" prefHeight="36.0" prefWidth="158.0" text="0.00/=" AnchorPane.leftAnchor="949.0" AnchorPane.rightAnchor="203.0">
+         <font>
+            <Font name="Bell MT Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnConfirmPayment" buttonType="RAISED" layoutX="1163.0" layoutY="741.0" onAction="#ConfirmPaymentOnAction" prefHeight="69.0" prefWidth="136.0" style="-fx-background-color: #4cd137;" text="Confirm" textFill="WHITE" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="42.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="CustName" editable="false" focusColor="BLACK" labelFloat="true" layoutX="664.0" layoutY="61.0" prefHeight="31.0" prefWidth="209.0" promptText="Customer Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="664.0" AnchorPane.rightAnchor="437.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Reg_No" editable="false" focusColor="BLACK" labelFloat="true" layoutX="396.0" layoutY="61.0" prefHeight="31.0" prefWidth="209.0" promptText="Vehicle Reg_No" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="396.0" AnchorPane.rightAnchor="705.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXTextField>
+      <ComboBox fx:id="cmbBookingId" layoutX="140.0" layoutY="61.0" prefHeight="31.0" prefWidth="188.0" promptText="Booking Id" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="982.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <JFXTextField fx:id="QtyForUse" focusColor="BLACK" labelFloat="true" layoutX="1084.0" layoutY="144.0" onKeyReleased="#QtyKeyReleased" prefHeight="31.0" prefWidth="105.0" promptText="Qty(Used)" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="1084.0" AnchorPane.rightAnchor="121.0">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="1084.0" layoutY="538.0" onAction="#ClearOnaction" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: #1e3799;" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="UserLoginContext" prefHeight="524.0" prefWidth="782.0" styleClass="login" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Label alignment="CENTER" layoutX="332.0" layoutY="47.0" prefHeight="79.0" prefWidth="169.0" text=" Log In" textFill="WHITE" AnchorPane.leftAnchor="332.0" AnchorPane.rightAnchor="281.0" AnchorPane.topAnchor="47.0">
+         <font>
+            <Font name="Bernard MT Condensed" size="45.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="userLogIn" buttonType="RAISED" layoutX="187.0" layoutY="323.0" onAction="#UserLogIn_OnAction" prefHeight="38.0" prefWidth="396.0" ripplerFill="BLACK" style="-fx-background-color: #341f97; -fx-border-color: #2f3542;" text="Login" textFill="WHITE" AnchorPane.rightAnchor="199.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXButton>
+      <Text fill="WHITE" layoutX="259.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-background-color: #ffffff;" text="New User" wrappingWidth="106.9999983087182" AnchorPane.bottomAnchor="124.92431640625" AnchorPane.topAnchor="378.14404296875">
+         <font>
+            <Font name="Malgun Gothic" size="21.0" />
+         </font></Text>
+      <Hyperlink layoutX="366.0" layoutY="375.0" onAction="#newUserAccount_OnAction" prefHeight="36.0" prefWidth="189.0" text="Create an account" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="120.0" AnchorPane.topAnchor="375.0">
+         <font>
+            <Font name="High Tower Text" size="21.0" />
+         </font></Hyperlink>
+      <JFXTextField fx:id="userId" focusColor="WHITE" labelFloat="true" layoutX="183.0" layoutY="176.0" onAction="#OpenUserIdOnAction" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="404.0" promptText="Id" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="195.0">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="userPassword" focusColor="WHITE" labelFloat="true" layoutX="183.0" layoutY="237.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="404.0" promptText="Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="195.0">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font></JFXPasswordField>
+      <Pane layoutX="241.0" layoutY="50.0" prefHeight="79.0" prefWidth="107.0" style="-fx-background-color: #ffffff;" styleClass="loginicon" stylesheets="@../css/main.css" />
+   </children>
+</AnchorPane>

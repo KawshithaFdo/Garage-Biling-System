@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManageMechanicContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1310.0" style="-fx-background-color: #95afc0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminForms.ManageMechanicController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="36.0" prefWidth="141.0" text="Mechanic Id  :" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMechanicId" layoutX="162.0" layoutY="18.0" prefHeight="28.0" prefWidth="106.0" text="id" textFill="WHITE" AnchorPane.topAnchor="18.0">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="76.0" layoutY="131.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Mechanic Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="76.0" AnchorPane.rightAnchor="1039.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="BLACK" labelFloat="true" layoutX="315.0" layoutY="131.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Mechanic Address" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="315.0" AnchorPane.rightAnchor="800.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtContact" focusColor="BLACK" labelFloat="true" layoutX="558.0" layoutY="131.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Contact" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="558.0" AnchorPane.rightAnchor="557.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtNic" focusColor="BLACK" labelFloat="true" layoutX="806.0" layoutY="131.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="NIC" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="806.0" AnchorPane.rightAnchor="309.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtsalary" focusColor="BLACK" labelFloat="true" layoutX="1045.0" layoutY="131.0" onKeyReleased="#OnKeyReleased" prefHeight="31.0" prefWidth="195.0" promptText="Salary" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="1045.0" AnchorPane.rightAnchor="70.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAddMechanic" buttonType="RAISED" layoutX="1131.0" layoutY="182.0" onAction="#addMechanicOnaction" prefHeight="38.0" prefWidth="141.0" style="-fx-background-color: #1e3799;" text="Add Mechanic" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="580.0" AnchorPane.rightAnchor="38.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblMechanic" layoutX="64.0" layoutY="243.0" prefHeight="347.0" prefWidth="1196.0" style="-fx-border-color: #353b48;" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="colMechanicId" prefWidth="126.99996948242188" text="Mechanic Id" />
+          <TableColumn fx:id="colName" prefWidth="184.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="279.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="167.0" text="Contact" />
+            <TableColumn fx:id="colNic" prefWidth="177.0" text="NIC" />
+            <TableColumn fx:id="colSalary" prefWidth="144.0" text="Salary" />
+            <TableColumn fx:id="colAdmin_Id" prefWidth="119.0" text="Admin Id" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="EdittxtName" focusColor="BLACK" labelFloat="true" layoutX="80.0" layoutY="698.0" onKeyReleased="#EditKeyreleased" prefHeight="31.0" prefWidth="195.0" promptText="Mechanic Name" style="-fx-background-color: #ffffff;" unFocusColor="BLACK">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="EdittxtAddress" focusColor="BLACK" labelFloat="true" layoutX="319.0" layoutY="698.0" onKeyReleased="#EditKeyreleased" prefHeight="31.0" prefWidth="195.0" promptText="Mechanic Address" style="-fx-background-color: #ffffff;" unFocusColor="BLACK">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="EdittxtContact" focusColor="BLACK" labelFloat="true" layoutX="562.0" layoutY="698.0" onKeyReleased="#EditKeyreleased" prefHeight="31.0" prefWidth="195.0" promptText="Contact" style="-fx-background-color: #ffffff;" unFocusColor="BLACK">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="EdittxtNic" focusColor="BLACK" labelFloat="true" layoutX="810.0" layoutY="698.0" onKeyReleased="#EditKeyreleased" prefHeight="31.0" prefWidth="195.0" promptText="NIC" style="-fx-background-color: #ffffff;" unFocusColor="BLACK">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="Edittxtsalary" focusColor="BLACK" labelFloat="true" layoutX="1049.0" layoutY="698.0" onKeyReleased="#EditKeyreleased" prefHeight="31.0" prefWidth="195.0" promptText="Salary" style="-fx-background-color: #ffffff;" unFocusColor="BLACK">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnDeleteMechanic" buttonType="RAISED" layoutX="1093.0" layoutY="748.0" onAction="#DeleteMechanicOnaction" prefHeight="38.0" prefWidth="179.0" style="-fx-background-color: #ff3f34;" text="Delete Mechanic" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="38.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateMechanic" buttonType="RAISED" layoutX="866.0" layoutY="748.0" onAction="#UpdateMechanicOnaction" prefHeight="38.0" prefWidth="179.0" style="-fx-background-color: #1e3799;" text="Update Mechanic" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="14.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="85.0" layoutY="76.0" prefHeight="36.0" prefWidth="141.0" text="Add Mechanic" AnchorPane.leftAnchor="85.0">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="598.0" prefHeight="36.0" prefWidth="141.0" text="Edit Mechanic" AnchorPane.leftAnchor="85.0">
+         <font>
+            <Font name="Cambria Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="EditM_Id" focusColor="BLACK" labelFloat="true" layoutX="80.0" layoutY="641.0" onAction="#openEditData" onKeyReleased="#EditKeyreleased" prefHeight="31.0" prefWidth="195.0" promptText="Mechanic ID" style="-fx-background-color: #ffffff;" unFocusColor="BLACK" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="1035.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>
